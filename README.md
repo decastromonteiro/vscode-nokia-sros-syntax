@@ -2,7 +2,7 @@
 
 This syntax highlighter implements syntax highlighting to Nokia SR-OS files.
 
-The supported file extensions are .`timos`, `.sros` and `.cmg`.
+The supported file extensions are `.timos`, `.sros` and `.cmg`.
 
 In case you have a `.cfg` file you can easily select Nokia SR-OS as the language of it as well.
 
