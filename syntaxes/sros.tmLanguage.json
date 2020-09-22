@@ -1,0 +1,118 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Nokia SR-OS",
+	"patterns": [
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#logconfig"
+		},
+		{
+			"include": "#addresses"
+		},
+		{
+			"include": "#cardmdatypes"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.sros",
+				"match": "\\b(no shutdown|allow|forward|permit)\\b"
+			},
+		{
+			"name": "invalid.illegal.sros",
+			"match": "\\b(deny-all|drop|deny|shutdown)\\b"
+		},
+		{
+			"name": "constant.language.sros.loopback",
+			"match": "\\b(loopback)\\b"
+		},
+		{
+			"name": "constant.numeric.sros",
+			"match": "\\b(\\d+)\\b"
+		}
+		]
+		},
+		"strings": {
+			"name": "string.quoted.double.sros",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.numeric.sros.ipv4",
+					"match": "\\d+\\.\\d+\\.\\d+\\.\\d+(\/\\d{1,2})?"
+				},
+				{
+					"name": "constant.numeric.sros.ipv6",
+					"match": "[0-9a-fA-F]{0,4}:([0-9a-fA-F]{0,4}:)+[0-9a-fA-F]{0,4}(\/\\d{1,3})?"
+				}
+			]
+		},
+		"logconfig": {
+			"name": "",
+			"begin": "log-id|accounting-policy|syslog|file-id",
+			"end": "exit",
+			"patterns": [
+				{
+					"name": "support.type.property-name.sros",
+					"match": "\\b(from|to|description|address|level|log-prefix|collection-interval|record|location|rollover|retention)\\b"
+				},
+				{
+					"name": "constant.numeric.sros",
+					"match": "\\b(\\d+)\\b"
+				},
+				{
+					"name": "invalid.illegal.sros.shutdown",
+					"match": "\\b(shutdown)\\b"
+				},
+				{
+					"name": "string.quoted.double.sros",
+					"match": "\"(.+)\""
+				},
+				{
+					"name": "keyword.control.sros.noshut",
+					"match": "no shutdown"
+				}
+			]
+		},
+		"addresses": {
+			"patterns": [
+				{
+					"name": "constant.numeric.sros.ipv4",
+					"match": "\\d+\\.\\d+\\.\\d+\\.\\d+(\/\\d{1,2})?"
+				},
+				{
+					"name": "constant.numeric.sros.ipv6",
+					"match": "[0-9a-fA-F]{0,4}:([0-9a-fA-F]{0,4}:)+[0-9a-fA-F]{0,4}(\/\\d{1,3})?"
+				
+				}
+		]
+		},
+		"cardmdatypes": {
+			"patterns": [
+				{
+					"name": "string.quoted.single.sros.cardtype",
+					"match": "\\b(iom-v-mg|iom-v)\\b"
+				},
+				{
+					"name": "string.quoted.single.sros.mdatype",
+					"match": "\\b(m20-v|isa-mg-v|isa-aa-v|isa-bb-v|isa-ip-reas-v)\\b"
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.block.documentation",
+			"begin": "#--------------------------------------------------|#",
+			"end": "#--------------------------------------------------|\n"
+		}
+	},
+	"scopeName": "source.nokia.sros"
+}

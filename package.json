@@ -1,0 +1,30 @@
+{
+    "name": "vscode-nokia-sros-syntax",
+    "publisher": "thepacketwizards",
+    "displayName": "Nokia SR-OS Syntax",
+    "description": "Nokia SR-OS Syntax Highlighter",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.48.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/decastromonteiro/vscode-nokia-sros-syntax.git"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "sros",
+            "aliases": ["Nokia SR-OS", "sros"],
+            "extensions": [".timos",".sros",".cmg"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "sros",
+            "scopeName": "source.nokia.sros",
+            "path": "./syntaxes/sros.tmLanguage.json"
+        }]
+    }
+}
