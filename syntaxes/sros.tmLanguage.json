@@ -100,11 +100,11 @@
 			"patterns": [
 				{
 					"name": "string.quoted.single.sros.cardtype",
-					"match": "\\b(iom-v-mg|iom-v)\\b"
+					"match": "\\b(iom-v-mg|iom-v|iom4-e-b|iom3-xp)\\b"
 				},
 				{
 					"name": "string.quoted.single.sros.mdatype",
-					"match": "\\b(m20-v|isa-mg-v|isa-aa-v|isa-bb-v|isa-ip-reas-v)\\b"
+					"match": "\\b(m20-v|me2-100gb-qsfp28|m2-10gb-xp-xfp|m20-1gb-xp-sfp|me10-10gb-sfp\\+|me6-10gb-sfp\\+|isa-mg-v|isa-aa-v|isa-bb-v|isa2-bb|isa-ip-reas-v)\\b"
 				}
 			]
 		},
